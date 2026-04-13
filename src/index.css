@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 144 38% 16%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 144 38% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 144 38% 16%;
+
+    --primary: 144 42% 21%;
+    --primary-foreground: 0 0% 100%;
+
+    --primary-deep: 144 45% 16%;
+    --primary-deep-foreground: 0 0% 100%;
+
+    --secondary: 42 47% 54%;
+    --secondary-foreground: 144 38% 16%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 44%;
+
+    --accent: 42 47% 54%;
+    --accent-foreground: 144 38% 16%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 144 20% 85%;
+    --input: 144 20% 85%;
+    --ring: 144 42% 21%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Instrument Serif', serif;
+  }
+}
+
+@layer utilities {
+  @keyframes fade-rise {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-rise {
+    animation: fade-rise 0.8s ease-out forwards;
+  }
+
+  .animate-fade-rise-delay {
+    opacity: 0;
+    animation: fade-rise 0.8s ease-out 0.2s forwards;
+  }
+
+  .animate-fade-rise-delay-2 {
+    opacity: 0;
+    animation: fade-rise 0.8s ease-out 0.4s forwards;
+  }
+
+  @keyframes fadeRiseUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes heroZoom {
+    0% {
+      transform: scale(1.08);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
